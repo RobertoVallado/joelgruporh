@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Blog Inmobiliario — Grupo RH | Joel Pacheco, Mérida Yucatán</title>
+  <meta name="description" content="Artículos, guías y noticias sobre inversión inmobiliaria en Yucatán. Desarrollos, plusvalía, certeza jurídica y más — por Joel Pacheco, Grupo RH." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://joelgruporh.mx/blog/" />
+
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://joelgruporh.mx/blog/" />
+  <meta property="og:title"       content="Blog Inmobiliario — Grupo RH | Joel Pacheco" />
+  <meta property="og:description" content="Artículos, guías y noticias sobre inversión inmobiliaria en Yucatán." />
+  <meta property="og:image"       content="https://joelgruporh.mx/assets/images/og-cover.jpg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Blog — Grupo RH",
+    "url": "https://joelgruporh.mx/blog/",
+    "description": "Artículos sobre inversión inmobiliaria, desarrollos y plusvalía en Yucatán.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Grupo RH",
+      "url": "https://joelgruporh.mx"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://joelgruporh.mx/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog",   "item": "https://joelgruporh.mx/blog/" }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+
+  <header>
+    <nav aria-label="Navegación principal">
+      <a href="../" class="logo" aria-label="Grupo RH — Inicio">GRUPO RH</a>
+      <div class="nav-links" role="list">
+        <a href="../#nosotros"    data-es="Nosotros"    data-en="About">Nosotros</a>
+        <a href="../#desarrollos" data-es="Desarrollos" data-en="Developments">Desarrollos</a>
+        <a href="./"             class="active" data-es="Blog" data-en="Blog">Blog</a>
+        <a href="../#contacto"  data-es="Contacto"    data-en="Contact">Contacto</a>
+      </div>
+      <div class="nav-actions">
+        <button id="lang-toggle" aria-label="Cambiar idioma">EN</button>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+  <nav class="mobile-drawer" id="mobile-drawer" aria-label="Menú móvil">
+    <a href="../#nosotros"    data-es="Nosotros"    data-en="About">Nosotros</a>
+    <a href="../#desarrollos" data-es="Desarrollos" data-en="Developments">Desarrollos</a>
+    <a href="./"             data-es="Blog"         data-en="Blog">Blog</a>
+    <a href="../#contacto"  data-es="Contacto"    data-en="Contact">Contacto</a>
+    <button class="drawer-lang">Switch to English</button>
+  </nav>
+
+  <main>
+    <div class="blog-page-hero">
+      <div class="container">
+        <span class="label" style="color:var(--gold-lt)"
+              data-es="Noticias &amp; consejos" data-en="News &amp; insights">Noticias &amp; consejos</span>
+        <h1 data-es="Blog Inmobiliario" data-en="Real Estate Blog">Blog Inmobiliario</h1>
+        <p data-es="Guías de inversión, novedades de nuestros desarrollos y todo lo que necesitas saber para invertir con certeza en Yucatán."
+           data-en="Investment guides, development news, and everything you need to invest with confidence in Yucatán.">
+          Guías de inversión, novedades de nuestros desarrollos y todo lo que necesitas saber para invertir con certeza en Yucatán.
+        </p>
+      </div>
+    </div>
+
+    <div class="blog-page-grid">
+      <div class="container">
+        <div class="blog-full-grid">
+          <!-- BLOG_CARDS — replaced by build.js on each build -->
+          {{BLOG_CARDS}}
+          <!-- /BLOG_CARDS -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-logo">GRUPO RH</span>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="../#nosotros"    data-es="Nosotros"    data-en="About">Nosotros</a>
+          <a href="../#desarrollos" data-es="Desarrollos" data-en="Developments">Desarrollos</a>
+          <a href="./"             data-es="Blog"         data-en="Blog">Blog</a>
+          <a href="../#contacto"  data-es="Contacto"    data-en="Contact">Contacto</a>
+        </nav>
+        <p class="footer-copy">&copy; <span id="year"></span> Grupo RH — Joel Pacheco.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script src="../js/main.js" defer></script>
+</body>
+</html>
