@@ -24,12 +24,19 @@ joelgruporh/
 │       ├── gruporh-logo.webp         Brand logo
 │       ├── og-cover.jpg              (add) Open Graph / social share image (1200×630)
 │       ├── favicon.ico               (add) Site favicon
-│       └── concept-images/           ← DEVELOPMENT PHOTOS GO HERE
-│           ├── gran-verona.jpg
-│           ├── playa-clara.jpg
-│           ├── playar.jpg
-│           ├── cal-canto.jpg
-│           └── rhevo.jpg
+│       ├── logos/                    ← Development logos (white-on-transparent PNG/SVG/WebP)
+│       │   ├── gran-verona-logo.png      from www.granverona.mx
+│       │   ├── playa-clara-logo.svg      from playaclara.mx
+│       │   ├── playar-logo.webp          from gruporh.mx
+│       │   ├── cal-canto-logo.png        from gruporh.mx
+│       │   ├── rhevo-logo.png            from rhevofractionals.com
+│       │   └── rhevo-iso.png             RHEVO isotype
+│       └── concept-images/           ← DEVELOPMENT PHOTOS (hero card images)
+│           ├── gran-verona.webp          + gran-verona-02/03.webp
+│           ├── playa-clara.webp          + playa-clara-02/03.webp
+│           ├── playar.webp               + playar-02/03.webp
+│           ├── cal-canto.webp            + cal-canto-02/03.webp
+│           └── rhevo.webp                + rhevo-02/03.webp
 │
 ├── content/
 │   └── posts/                        One JSON file per blog post
@@ -50,17 +57,19 @@ joelgruporh/
 
 Drop photos into `assets/images/concept-images/` using these exact filenames. The dev cards on the main page will pick them up automatically — no code changes needed.
 
-| Development | Expected filename |
-|---|---|
-| Gran Verona | `gran-verona.jpg` (or `.webp`) |
-| Playa Clara | `playa-clara.jpg` (or `.webp`) |
-| Playar | `playar.jpg` (or `.webp`) |
-| Cal & Canto | `cal-canto.jpg` (or `.webp`) |
-| RHEVO | `rhevo.jpg` (or `.webp`) |
+| Development | Card image (concept-images/) | Logo (logos/) |
+|---|---|---|
+| Gran Verona | `gran-verona.webp` ✓ | `gran-verona-logo.png` ✓ |
+| Playa Clara | `playa-clara.webp` ✓ | `playa-clara-logo.svg` ✓ |
+| Playar | `playar.webp` ✓ | `playar-logo.webp` ✓ |
+| Cal & Canto | `cal-canto.webp` ✓ | `cal-canto-logo.png` ✓ |
+| RHEVO | `rhevo.webp` ✓ | `rhevo-logo.png` ✓ |
 
-Until an image is present, the card shows a branded color-block placeholder. Once the file exists, the photo loads automatically.
+All logos are **white-on-transparent** — they sit on top of the dark gradient color block and remain visible over photos. The card thumbnail tries to load the concept image first; if unavailable the color-block placeholder shows instead. Both states display the logo centered in the thumb.
 
-Recommended size: **900×675px minimum**, 16:10 ratio, optimized as WebP for best performance.
+To replace a card photo with a higher-res version, just overwrite the matching `.webp` file — no HTML changes needed.
+
+Recommended card photo size: **900×675px minimum**, 4:3 ratio, WebP format.
 
 ---
 
