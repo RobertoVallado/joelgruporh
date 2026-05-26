@@ -51,29 +51,46 @@
 
   <header>
     <nav aria-label="Navegación principal">
-      <a href="../" class="logo" aria-label="Grupo RH — Inicio">GRUPO RH</a>
+      <a href="../index.html" class="logo" aria-label="Joel Pacheco — Asesor de Inversiones">
+        <span class="logo-name">Joel Pacheco</span>
+        <span class="logo-sep" aria-hidden="true"> | </span>
+        <span class="logo-title"
+              data-es="Asesor de Inversiones"
+              data-en="Investment Advisor">Asesor de Inversiones</span>
+      </a>
       <div class="nav-links" role="list">
-        <a href="../#nosotros"    data-es="Nosotros"    data-en="About">Nosotros</a>
-        <a href="../#desarrollos" data-es="Desarrollos" data-en="Developments">Desarrollos</a>
-        <a href="./"             class="active" data-es="Blog" data-en="Blog">Blog</a>
-        <a href="../#contacto"  data-es="Contacto"    data-en="Contact">Contacto</a>
+        <a href="../index.html#nosotros"    data-es="Nosotros"    data-en="About">Nosotros</a>
+        <a href="../index.html#garantias"   data-es="Garantías"   data-en="Our Pledge">Garantías</a>
+        <a href="../index.html#desarrollos" data-es="Desarrollos" data-en="Developments">Desarrollos</a>
+        <a href="index.html"                class="active" data-es="Blog" data-en="Blog">Blog</a>
+        <a href="../index.html#contacto"    data-es="Contacto"    data-en="Contact">Contacto</a>
       </div>
       <div class="nav-actions">
         <button id="lang-toggle" aria-label="Cambiar idioma">EN</button>
-        <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <button class="hamburger" id="hamburger" aria-label="Abrir menú"
+                aria-expanded="false" aria-controls="mobile-drawer">
           <span></span><span></span><span></span>
         </button>
       </div>
     </nav>
   </header>
 
-  <div class="mobile-overlay" id="mobile-overlay"></div>
+  <div class="mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
   <nav class="mobile-drawer" id="mobile-drawer" aria-label="Menú móvil">
-    <a href="../#nosotros"    data-es="Nosotros"    data-en="About">Nosotros</a>
-    <a href="../#desarrollos" data-es="Desarrollos" data-en="Developments">Desarrollos</a>
-    <a href="./"             data-es="Blog"         data-en="Blog">Blog</a>
-    <a href="../#contacto"  data-es="Contacto"    data-en="Contact">Contacto</a>
-    <button class="drawer-lang">Switch to English</button>
+    <div class="drawer-hdr">
+      <span class="drawer-brand">Joel Pacheco</span>
+    </div>
+    <div class="drawer-nav">
+      <a href="../index.html#nosotros"    data-es="Nosotros"    data-en="About">Nosotros</a>
+      <a href="../index.html#garantias"   data-es="Garantías"   data-en="Our Pledge">Garantías</a>
+      <a href="../index.html#desarrollos" data-es="Desarrollos" data-en="Developments">Desarrollos</a>
+      <a href="index.html"                data-es="Blog"         data-en="Blog">Blog</a>
+      <a href="../index.html#contacto"    data-es="Contacto"    data-en="Contact">Contacto</a>
+    </div>
+    <div class="drawer-foot">
+      <a class="drawer-phone" href="tel:+529993708117">+52 999 370 8117</a>
+      <button class="drawer-lang" aria-label="Toggle language">Switch to English</button>
+    </div>
   </nav>
 
   <main>
@@ -105,10 +122,11 @@
       <div class="footer-inner">
         <span class="footer-logo">GRUPO RH</span>
         <nav class="footer-links" aria-label="Footer">
-          <a href="../#nosotros"    data-es="Nosotros"    data-en="About">Nosotros</a>
-          <a href="../#desarrollos" data-es="Desarrollos" data-en="Developments">Desarrollos</a>
-          <a href="./"             data-es="Blog"         data-en="Blog">Blog</a>
-          <a href="../#contacto"  data-es="Contacto"    data-en="Contact">Contacto</a>
+          <a href="../index.html#nosotros"    data-es="Nosotros"    data-en="About">Nosotros</a>
+          <a href="../index.html#garantias"   data-es="Garantías"   data-en="Our Pledge">Garantías</a>
+          <a href="../index.html#desarrollos" data-es="Desarrollos" data-en="Developments">Desarrollos</a>
+          <a href="index.html"                data-es="Blog"         data-en="Blog">Blog</a>
+          <a href="../index.html#contacto"    data-es="Contacto"    data-en="Contact">Contacto</a>
         </nav>
         <p class="footer-copy">&copy; <span id="year"></span> Grupo RH — Joel Pacheco.</p>
       </div>

@@ -201,7 +201,7 @@ header.scrolled {
   -webkit-backdrop-filter: blur(16px);
   border-bottom-color: var(--border);
 }
-nav {
+header nav {
   display: flex;
   align-items: center;
   justify-content: space-between;

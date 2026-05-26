@@ -71,9 +71,13 @@ function loadPosts() {
 }
 
 /* ── Render a single blog card (used in listing pages) ─────── */
-function renderCard(post, relPrefix = '') {
+/* imgPrefix  — prepended to asset paths  ('' from root, '../' from blog/) */
+/* inBlogDir  — true when rendering cards inside blog/index.html           */
+function renderCard(post, imgPrefix = '', inBlogDir = false) {
+  const linkHref = inBlogDir ? `${post.slug}/index.html` : `blog/${post.slug}/index.html`;
+
   const img = post.image
-    ? `<img src="${relPrefix}${post.image}" alt="${post.image_alt_es || ''}" loading="lazy" />`
+    ? `<img src="${imgPrefix}${post.image}" alt="${post.image_alt_es || ''}" loading="lazy" />`
     : `<div class="blog-thumb-placeholder">
         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#B8511F" stroke-width="1.5">
           <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/>
@@ -95,7 +99,7 @@ function renderCard(post, relPrefix = '') {
     </div>
     <h3 data-es="${post.title_es}" data-en="${post.title_en}">${post.title_es}</h3>
     <p data-es="${excerpt_es}" data-en="${excerpt_en}">${excerpt_es}</p>
-    <a href="${relPrefix}blog/${post.slug}/" class="blog-read"
+    <a href="${linkHref}" class="blog-read"
        data-es="Leer más →" data-en="Read more →">Leer más →</a>
   </div>
 </article>`.trim();
@@ -137,7 +141,7 @@ function buildPostPages(posts) {
 /* ── Generate blog listing page ────────────────────────────── */
 function buildBlogIndex(posts) {
   const tmpl  = readTemplate(TMPL_INDEX);
-  const cards = posts.map(p => renderCard(p, '../')).join('\n');
+  const cards = posts.map(p => renderCard(p, '../', true)).join('\n');
   const html  = tmpl.replace('{{BLOG_CARDS}}', cards);
   ensureDir(BLOG_DIR);
   writeFile(path.join(BLOG_DIR, 'index.html'), html);
