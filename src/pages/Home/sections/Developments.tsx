@@ -22,9 +22,9 @@ export default function Developments() {
             <span className="label">{t('developments.sectionLabel')}</span>
             <h2 id="desarrollos-title">{t('developments.heading')}</h2>
           </MotionSection>
-          <a href={`/${lang}/#contacto`} className="btn btn-outline">
+          <Link to={`/${lang}/contacto`} className="btn btn-outline">
             {t('developments.requestInfo')}
-          </a>
+          </Link>
         </div>
 
         <div className="developments-grid">
@@ -77,9 +77,9 @@ export default function Developments() {
               <p className="dev-tagline">{t('developments.soldOut.tagline')}</p>
               <h3>{t('developments.soldOut.heading')}</h3>
               <p>{t('developments.soldOut.body')}</p>
-              <a href={`/${lang}/#contacto`} className="btn btn-outline-light">
+              <Link to={`/${lang}/contacto`} className="btn btn-outline-light">
                 {t('developments.soldOut.cta')}
-              </a>
+              </Link>
             </div>
           </article>
         </div>

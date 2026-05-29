@@ -90,7 +90,7 @@ export default function DesarrolloDetail() {
         aria-label={dev.name}
       >
         <div className="container">
-          <Link to={`/${lang}/#desarrollos`} className="dev-detail-back">
+          <Link to={`/${lang}/desarrollos`} className="dev-detail-back">
             {t('desarrollos.back')}
           </Link>
           <img src={dev.logo} alt={dev.logoAlt} className="dev-detail-logo" />

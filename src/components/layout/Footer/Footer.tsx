@@ -13,10 +13,10 @@ export default function Footer() {
         <div className="footer-inner">
           <span className="footer-logo">GRUPO RH</span>
           <nav className="footer-links" aria-label="Footer">
-            <a href={`/${lang}/#nosotros`}>{t('footer.about')}</a>
-            <a href={`/${lang}/#desarrollos`}>{t('footer.developments')}</a>
+            <Link to={`/${lang}/nosotros`}>{t('footer.about')}</Link>
+            <Link to={`/${lang}/desarrollos`}>{t('footer.developments')}</Link>
             <Link to={`/${lang}/blog/`}>{t('footer.blog')}</Link>
-            <a href={`/${lang}/#contacto`}>{t('footer.contact')}</a>
+            <Link to={`/${lang}/contacto`}>{t('footer.contact')}</Link>
             <a href="#">{t('footer.privacy')}</a>
           </nav>
           <p className="footer-copy">

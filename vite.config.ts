@@ -6,6 +6,7 @@ import { join } from 'path'
 
 const SITE_URL = 'https://joelpacheco-gruporh.robertovallado.dev'
 const LANGS = ['es', 'en']
+const SECTION_SLUGS = ['nosotros', 'garantias', 'desarrollos', 'contacto']
 const DESARROLLO_SLUGS = ['gran-verona', 'playa-clara', 'playar', 'cal-canto', 'rhevo']
 
 function getPostSlugs(): string[] {
@@ -23,6 +24,7 @@ export default defineConfig(() => {
 
   const dynamicRoutes = LANGS.flatMap((lang) => [
     `/${lang}/`,
+    ...SECTION_SLUGS.map((s) => `/${lang}/${s}`),
     `/${lang}/blog/`,
     ...postSlugs.map((slug) => `/${lang}/blog/${slug}/`),
     ...DESARROLLO_SLUGS.map((slug) => `/${lang}/desarrollos/${slug}/`),

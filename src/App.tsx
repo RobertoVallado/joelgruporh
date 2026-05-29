@@ -43,6 +43,12 @@ export default function App() {
       <Route index element={<Navigate to="/es/" replace />} />
       <Route path=":lang" element={<LangLayout />}>
         <Route index element={<Home />} />
+        {/* Section routes — render Home and scroll to the named section */}
+        <Route path="nosotros" element={<Home section="nosotros" />} />
+        <Route path="garantias" element={<Home section="garantias" />} />
+        <Route path="desarrollos" element={<Home section="desarrollos" />} />
+        <Route path="contacto" element={<Home section="contacto" />} />
+        {/* Content routes */}
         <Route path="blog" element={<BlogList />} />
         <Route path="blog/:slug" element={<BlogPost />} />
         <Route path="desarrollos/:slug" element={<DesarrolloDetail />} />

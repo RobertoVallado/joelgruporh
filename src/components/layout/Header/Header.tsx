@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useLang } from '../../../hooks/useLang'
 import { useActiveNav } from '../../../hooks/useActiveNav'
@@ -10,6 +10,7 @@ const NAV_SECTIONS = ['nosotros', 'garantias', 'desarrollos', 'blog', 'contacto'
 export default function Header() {
   const { t } = useTranslation()
   const { lang, switchLang } = useLang()
+  const location = useLocation()
   const [scrolled, setScrolled] = useState(false)
   const [drawerOpen, setDrawerOpen] = useState(false)
   const activeId = useActiveNav(NAV_SECTIONS)
@@ -21,6 +22,21 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handler)
   }, [])
 
+  // Determine active link: scroll-based on home, path-based elsewhere
+  const isHome = location.pathname === `/${lang}` || location.pathname === `/${lang}/`
+  const pathSection = location.pathname.split('/').pop() ?? ''
+  const active = isHome ? activeId : pathSection
+
+  const navLink = (section: string, label: string) => (
+    <Link
+      to={`/${lang}/${section}`}
+      role="listitem"
+      className={active === section ? 'active' : ''}
+    >
+      {label}
+    </Link>
+  )
+
   return (
     <header className={scrolled ? 'scrolled' : ''}>
       <nav aria-label={t('nav.mobileMenu')}>
@@ -31,41 +47,17 @@ export default function Header() {
         </Link>
 
         <div className="nav-links" role="list">
-          <a
-            href={`/${lang}/#nosotros`}
-            role="listitem"
-            className={activeId === 'nosotros' ? 'active' : ''}
-          >
-            {t('nav.about')}
-          </a>
-          <a
-            href={`/${lang}/#garantias`}
-            role="listitem"
-            className={activeId === 'garantias' ? 'active' : ''}
-          >
-            {t('nav.guarantees')}
-          </a>
-          <a
-            href={`/${lang}/#desarrollos`}
-            role="listitem"
-            className={activeId === 'desarrollos' ? 'active' : ''}
-          >
-            {t('nav.developments')}
-          </a>
+          {navLink('nosotros',   t('nav.about'))}
+          {navLink('garantias',  t('nav.guarantees'))}
+          {navLink('desarrollos',t('nav.developments'))}
           <Link
             to={`/${lang}/blog/`}
             role="listitem"
-            className={activeId === 'blog' ? 'active' : ''}
+            className={location.pathname.includes('/blog') ? 'active' : ''}
           >
             {t('nav.blog')}
           </Link>
-          <a
-            href={`/${lang}/#contacto`}
-            role="listitem"
-            className={activeId === 'contacto' ? 'active' : ''}
-          >
-            {t('nav.contact')}
-          </a>
+          {navLink('contacto', t('nav.contact'))}
         </div>
 
         <div className="nav-actions">

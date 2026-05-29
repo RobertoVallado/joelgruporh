@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useLang } from '../../../hooks/useLang'
 
@@ -22,12 +23,12 @@ export default function Hero() {
         <p className="hero-sub">{t('hero.sub')}</p>
 
         <div className="hero-ctas">
-          <a href={`/${lang}/#desarrollos`} className="btn btn-outline-light">
+          <Link to={`/${lang}/desarrollos`} className="btn btn-outline-light">
             {t('hero.ctaView')}
-          </a>
-          <a href={`/${lang}/#contacto`} className="btn btn-primary">
+          </Link>
+          <Link to={`/${lang}/contacto`} className="btn btn-primary">
             {t('hero.ctaTalk')}
-          </a>
+          </Link>
         </div>
       </div>
 

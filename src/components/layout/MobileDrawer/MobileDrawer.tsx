@@ -43,21 +43,11 @@ export default function MobileDrawer({ open, onClose }: MobileDrawerProps) {
             </Dialog.Close>
           </Dialog.Title>
           <div className="drawer-nav">
-            <a href={`/${lang}/#nosotros`} onClick={close}>
-              {t('nav.about')}
-            </a>
-            <a href={`/${lang}/#garantias`} onClick={close}>
-              {t('nav.guarantees')}
-            </a>
-            <a href={`/${lang}/#desarrollos`} onClick={close}>
-              {t('nav.developments')}
-            </a>
-            <Link to={`/${lang}/blog/`} onClick={close}>
-              {t('nav.blog')}
-            </Link>
-            <a href={`/${lang}/#contacto`} onClick={close}>
-              {t('nav.contact')}
-            </a>
+            <Link to={`/${lang}/nosotros`}    onClick={close}>{t('nav.about')}</Link>
+            <Link to={`/${lang}/garantias`}   onClick={close}>{t('nav.guarantees')}</Link>
+            <Link to={`/${lang}/desarrollos`} onClick={close}>{t('nav.developments')}</Link>
+            <Link to={`/${lang}/blog/`}       onClick={close}>{t('nav.blog')}</Link>
+            <Link to={`/${lang}/contacto`}    onClick={close}>{t('nav.contact')}</Link>
           </div>
           <div className="drawer-foot">
             <a className="drawer-phone" href="tel:+529993708117">
