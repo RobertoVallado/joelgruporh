@@ -1,0 +1,179 @@
+{
+  "nav": {
+    "logoTitle": "Asesor de Inversiones",
+    "about": "Nosotros",
+    "guarantees": "Garantías",
+    "developments": "Desarrollos",
+    "blog": "Blog",
+    "contact": "Contacto",
+    "langLabel": "EN",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "mobileMenu": "Menú móvil"
+  },
+  "hero": {
+    "eyebrow": "Inversión inmobiliaria en Yucatán",
+    "headingLine1": "Bases sólidas.",
+    "headingLine2": "Futuro seguro.",
+    "sub": "Desarrollos residenciales y costeros con certeza jurídica, alta plusvalía y respaldo de un equipo comprometido contigo.",
+    "ctaView": "Ver desarrollos",
+    "ctaTalk": "Hablar con un asesor",
+    "stat1Label": "Desarrollos activos",
+    "stat2Label": "Proyectos vendidos al 100%",
+    "stat3Label": "Atención con asesor",
+    "stat4Label": "Great Place to Work®"
+  },
+  "guarantees": {
+    "sectionLabel": "Por qué elegirnos",
+    "heading": "3 Garantías en tu inversión",
+    "card1Title": "Transparencia",
+    "card1Body": "Acceso completo a la información en cada etapa de tu inversión. Sin sorpresas, sin letra pequeña — solo claridad total.",
+    "card1Alt": "Diseño interior moderno que refleja transparencia y claridad en la inversión inmobiliaria",
+    "card2Title": "Retorno de Inversión",
+    "card2Body": "Identificamos ubicaciones estratégicas con plusvalía creciente para que tu patrimonio trabaje por ti desde el primer día.",
+    "card2Alt": "Árbol creciendo desde monedas — símbolo del retorno de inversión en bienes raíces",
+    "card3Title": "Seguridad",
+    "card3Body": "Documentación legal impecable y certeza jurídica en cada desarrollo. Tu inversión está protegida en todo momento.",
+    "card3Alt": "Apretón de manos que representa la seguridad jurídica y confianza en cada inversión"
+  },
+  "developments": {
+    "sectionLabel": "Nuestros proyectos",
+    "heading": "Conoce nuestros desarrollos",
+    "requestInfo": "Solicitar información",
+    "quoteNow": "Cotizar ahora",
+    "granVerona": {
+      "badge": "Nuevo Norte de Mérida",
+      "tagline": "Vive la ciudad",
+      "body": "Lotes residenciales en el nuevo norte de Mérida. Urbanización de primer nivel, comunidad planeada y plusvalía comprobada.",
+      "alt": "Gran Verona — lotes residenciales en el nuevo norte de Mérida"
+    },
+    "playaClara": {
+      "badge": "Costa Esmeralda",
+      "tagline": "Vive la costa",
+      "body": "Lotes semi-urbanizados a 9.5 km del mar en la Costa Esmeralda. Tu paraíso costero con acceso a servicios completos.",
+      "alt": "Playa Clara — lotes costeros en Costa Esmeralda, Yucatán"
+    },
+    "playar": {
+      "badge": "Santa Clara, Dzidzantún",
+      "tagline": "Vive el verano",
+      "body": "Comunidad vacacional costera con espíritu de \"Un verano eterno\". El escape perfecto sin alejarte de Mérida.",
+      "alt": "Playar — comunidad vacacional costera en Santa Clara, Dzidzantún"
+    },
+    "calCanto": {
+      "badge": "Conkal, Norte de Mérida",
+      "tagline": "Vive la cultura",
+      "body": "Un lugar para hacer historia. Desarrollo exclusivo con proyección de 50–100% de plusvalía en zona de alto crecimiento.",
+      "alt": "Cal y Canto — desarrollo exclusivo en Conkal, norte de Mérida"
+    },
+    "rhevo": {
+      "badge": "Costa Esmeralda — Fraccionario",
+      "tagline": "El lujo de hacerlo posible",
+      "body": "Modelo de inversión fraccionaria premium en la Costa Esmeralda. Accede al lujo con una inversión accesible y retorno garantizado.",
+      "cta": "Convertirme en inversionista",
+      "alt": "RHEVO — inversión fraccionaria premium en Costa Esmeralda"
+    },
+    "soldOut": {
+      "badge": "Agotados",
+      "tagline": "Historial comprobado",
+      "heading": "Desarrollos vendidos al 100%",
+      "body": "Selva, Ainara, Fincas y Real — todos entregados y 100% vendidos. Nuestro historial habla por sí solo.",
+      "cta": "Quiero ser el siguiente"
+    }
+  },
+  "about": {
+    "sectionLabel": "Quiénes somos",
+    "heading": "Construimos comunidades, no solo propiedades",
+    "lead": "Somos Grupo RH — un equipo comprometido con hacer de cada inversión una experiencia confiable, transparente y con retorno real. R+H = Win-Win.",
+    "gpwCertifiedAs": "Certificados como",
+    "gpwTitle": "Great Place to Work®",
+    "gpwAlt": "Great Place to Work certificación",
+    "value1Strong": "Compromiso",
+    "value1Rest": "— cumplimos lo que prometemos en cada etapa de tu proyecto.",
+    "value2Strong": "Excelencia",
+    "value2Rest": "— estándares de calidad que superan las expectativas del mercado.",
+    "value3Strong": "Colectividad",
+    "value3Rest": "— construimos comunidades donde las familias prosperan juntas.",
+    "value4Strong": "Éxito",
+    "value4Rest": "— cada desarrollo está diseñado para generar retorno real y duradero."
+  },
+  "blogPreview": {
+    "sectionLabel": "Noticias y consejos",
+    "heading": "Artículos recientes",
+    "viewAll": "Ver todos los artículos",
+    "readMore": "Leer más →"
+  },
+  "contact": {
+    "sectionLabel": "Hablemos",
+    "heading": "¿Listo para invertir?",
+    "addressLabel": "Dirección",
+    "phoneLabel": "Teléfono",
+    "emailLabel": "Correo",
+    "hoursLabel": "Atención",
+    "hoursValue": "Siempre disponible — el agente responde 24/7",
+    "followUs": "Síguenos",
+    "slotHeading": "¿Hablamos ahora?",
+    "slotSub": "Nuestro asesor está disponible para resolver todas tus dudas sobre inversión inmobiliaria en Yucatán.",
+    "formName": "Tu nombre",
+    "formPhone": "Teléfono",
+    "formEmail": "Correo electrónico",
+    "formProject": "Selecciona un desarrollo",
+    "formSubmit": "Enviar solicitud",
+    "formSending": "Enviando...",
+    "formSuccess": "¡Mensaje enviado! Te contactaremos pronto.",
+    "formError": "Hubo un error. Intenta de nuevo.",
+    "orEmail": "O escríbenos a",
+    "whatsappCta": "Escribir por WhatsApp"
+  },
+  "footer": {
+    "about": "Nosotros",
+    "developments": "Desarrollos",
+    "blog": "Blog",
+    "contact": "Contacto",
+    "privacy": "Aviso de privacidad",
+    "copyright": "Todos los derechos reservados."
+  },
+  "blog": {
+    "heroLabel": "Artículos",
+    "heroHeading": "Blog Grupo RH",
+    "backToBlog": "← Volver al Blog",
+    "readMore": "Leer más →",
+    "by": "Por",
+    "publishedOn": "Publicado el"
+  },
+  "desarrollos": {
+    "heroLabel": "Desarrollo",
+    "requestInfo": "Solicitar información",
+    "whatsapp": "Consultar por WhatsApp",
+    "back": "← Ver todos los desarrollos",
+    "conceptImages": "Imágenes del proyecto",
+    "formHeading": "¿Te interesa este desarrollo?",
+    "formSub": "Déjanos tus datos y un asesor te contactará a la brevedad."
+  },
+  "seo": {
+    "homeTitle": "Joel Pacheco | Grupo RH — Desarrollos Inmobiliarios en Mérida, Yucatán",
+    "homeDesc": "Inversión inmobiliaria con bases sólidas en Yucatán. Descubre Gran Verona, Playa Clara, Playar, Cal & Canto y RHEVO — desarrollos residenciales y costeros con plusvalía garantizada.",
+    "blogListTitle": "Blog | Grupo RH — Inversión Inmobiliaria en Yucatán",
+    "blogListDesc": "Artículos sobre inversión inmobiliaria en Yucatán: plusvalía, desarrollos, consejos y tendencias del mercado.",
+    "notFoundTitle": "404 — Página no encontrada | Grupo RH",
+    "granVeronaTitle": "Gran Verona | Grupo RH — Lotes Residenciales Mérida Norte, Yucatán",
+    "granVeronaDesc": "Lotes residenciales en el nuevo norte de Mérida. Urbanización de primer nivel, comunidad planeada y plusvalía comprobada.",
+    "playaClaraTitle": "Playa Clara | Grupo RH — Lotes Costeros Costa Esmeralda, Yucatán",
+    "playaClaraDesc": "Lotes semi-urbanizados a 9.5 km del mar en la Costa Esmeralda. Tu paraíso costero con acceso a servicios completos.",
+    "playarTitle": "Playar | Grupo RH — Comunidad Vacacional Costera, Dzidzantún",
+    "playarDesc": "Comunidad vacacional costera con espíritu de 'Un verano eterno'. El escape perfecto sin alejarte de Mérida.",
+    "calCantoTitle": "Cal & Canto | Grupo RH — Desarrollo Exclusivo en Conkal, Yucatán",
+    "calCantoDesc": "Un lugar para hacer historia. Desarrollo exclusivo con proyección de 50–100% de plusvalía en zona de alto crecimiento.",
+    "rhevoTitle": "RHEVO | Grupo RH — Inversión Fraccionaria Premium Costa Esmeralda",
+    "rhevoDesc": "Modelo de inversión fraccionaria premium en la Costa Esmeralda. Accede al lujo con una inversión accesible y retorno garantizado."
+  },
+  "notFound": {
+    "heading": "Página no encontrada",
+    "body": "Lo sentimos, la página que buscas no existe.",
+    "cta": "Volver al inicio"
+  },
+  "mobile": {
+    "phone": "+52 999 370 8117",
+    "switchToEnglish": "Switch to English",
+    "switchToSpanish": "Cambiar a Español"
+  }
+}

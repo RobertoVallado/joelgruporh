@@ -1,0 +1,77 @@
+import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import { useLang } from '../../../hooks/useLang'
+import MotionSection from '../../../components/ui/MotionSection'
+import LazyImage from '../../../components/ui/LazyImage'
+import { DESARROLLOS } from '../../../data/desarrollos'
+
+const SOLD_OUT_GRADIENT = 'linear-gradient(135deg,#0D1F18,#1B3A2D)'
+
+export default function Developments() {
+  const { t } = useTranslation()
+  const { lang } = useLang()
+
+  return (
+    <section id="desarrollos" aria-labelledby="desarrollos-title">
+      <div className="container">
+        <div className="dev-header-row">
+          <MotionSection>
+            <span className="label">{t('developments.sectionLabel')}</span>
+            <h2 id="desarrollos-title">{t('developments.heading')}</h2>
+          </MotionSection>
+          <a href={`/${lang}/#contacto`} className="btn btn-outline">
+            {t('developments.requestInfo')}
+          </a>
+        </div>
+
+        <div className="developments-grid">
+          {DESARROLLOS.map((dev, i) => (
+            <MotionSection key={dev.slug} className="dev-card" delay={(i % 3) * 0.1}>
+              <div className="dev-thumb" style={{ background: dev.gradient }}>
+                {dev.conceptImages[0] && (
+                  <LazyImage src={dev.conceptImages[0]} alt={t(dev.altKey)} />
+                )}
+                <div className="dev-color-block" aria-hidden="true">
+                  <span className="dev-color-initial">{dev.initials}</span>
+                </div>
+                <span className="dev-badge">{t(dev.badgeKey)}</span>
+              </div>
+              <div className="dev-body">
+                <img
+                  className="dev-logo"
+                  src={dev.logo}
+                  alt={dev.logoAlt}
+                  loading="lazy"
+                />
+                <p className="dev-tagline">{t(dev.taglineKey)}</p>
+                <h3>{dev.name}</h3>
+                <p>{t(dev.bodyKey)}</p>
+                <Link to={`/${lang}/desarrollos/${dev.slug}/`} className="btn btn-outline">
+                  {t(dev.ctaKey)}
+                </Link>
+              </div>
+            </MotionSection>
+          ))}
+
+          {/* Sold-out callout */}
+          <MotionSection className="dev-card sold-out" delay={0.2}>
+            <div className="dev-thumb" style={{ background: SOLD_OUT_GRADIENT }}>
+              <div className="dev-color-block" aria-hidden="true">
+                <span className="dev-color-initial">100%</span>
+              </div>
+              <span className="dev-badge">{t('developments.soldOut.badge')}</span>
+            </div>
+            <div className="dev-body">
+              <p className="dev-tagline">{t('developments.soldOut.tagline')}</p>
+              <h3>{t('developments.soldOut.heading')}</h3>
+              <p>{t('developments.soldOut.body')}</p>
+              <a href={`/${lang}/#contacto`} className="btn btn-outline-light">
+                {t('developments.soldOut.cta')}
+              </a>
+            </div>
+          </MotionSection>
+        </div>
+      </div>
+    </section>
+  )
+}

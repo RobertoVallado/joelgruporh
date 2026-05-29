@@ -1,0 +1,179 @@
+{
+  "nav": {
+    "logoTitle": "Investment Advisor",
+    "about": "About",
+    "guarantees": "Our Pledge",
+    "developments": "Developments",
+    "blog": "Blog",
+    "contact": "Contact",
+    "langLabel": "ES",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "mobileMenu": "Mobile menu"
+  },
+  "hero": {
+    "eyebrow": "Real estate investment in Yucatán",
+    "headingLine1": "Solid foundations.",
+    "headingLine2": "Secure future.",
+    "sub": "Residential and coastal developments with legal certainty, strong appreciation, and a team fully committed to your success.",
+    "ctaView": "View developments",
+    "ctaTalk": "Talk to an advisor",
+    "stat1Label": "Active developments",
+    "stat2Label": "100% sold-out projects",
+    "stat3Label": "Advisor availability",
+    "stat4Label": "Great Place to Work®"
+  },
+  "guarantees": {
+    "sectionLabel": "Why choose us",
+    "heading": "3 Guarantees on your investment",
+    "card1Title": "Transparency",
+    "card1Body": "Full information access at every stage of your investment. No surprises, no fine print — just complete clarity.",
+    "card1Alt": "Modern interior design reflecting transparency and clarity in real estate investment",
+    "card2Title": "Return on Investment",
+    "card2Body": "We identify strategic locations with growing appreciation so your assets work for you from day one.",
+    "card2Alt": "Tree growing from coins — symbol of return on investment in real estate",
+    "card3Title": "Security",
+    "card3Body": "Impeccable legal documentation and legal certainty in every development. Your investment is protected at all times.",
+    "card3Alt": "Handshake representing legal security and trust in every investment"
+  },
+  "developments": {
+    "sectionLabel": "Our projects",
+    "heading": "Discover our developments",
+    "requestInfo": "Request information",
+    "quoteNow": "Get a quote",
+    "granVerona": {
+      "badge": "North Mérida",
+      "tagline": "Live the city",
+      "body": "Residential lots in northern Mérida. First-class urbanization, planned community, and proven appreciation.",
+      "alt": "Gran Verona — residential lots in northern Mérida"
+    },
+    "playaClara": {
+      "badge": "Emerald Coast",
+      "tagline": "Live the coast",
+      "body": "Semi-urbanized lots 9.5 km from the sea on the Emerald Coast. Your coastal paradise with full services.",
+      "alt": "Playa Clara — coastal lots on the Emerald Coast, Yucatán"
+    },
+    "playar": {
+      "badge": "Santa Clara, Dzidzantún",
+      "tagline": "Live summer",
+      "body": "Coastal vacation community with the spirit of \"An eternal summer.\" The perfect escape, never far from Mérida.",
+      "alt": "Playar — coastal vacation community in Santa Clara, Dzidzantún"
+    },
+    "calCanto": {
+      "badge": "Conkal, North of Mérida",
+      "tagline": "Live culture",
+      "body": "A place to make history. Exclusive development with 50–100% appreciation projected in a high-growth area.",
+      "alt": "Cal & Canto — exclusive development in Conkal, north of Mérida"
+    },
+    "rhevo": {
+      "badge": "Emerald Coast — Fractional",
+      "tagline": "Making luxury possible",
+      "body": "Premium fractional investment model on the Emerald Coast. Access luxury with an accessible entry point and guaranteed returns.",
+      "cta": "Become an investor",
+      "alt": "RHEVO — premium fractional investment on the Emerald Coast"
+    },
+    "soldOut": {
+      "badge": "Sold out",
+      "tagline": "Proven track record",
+      "heading": "100% sold-out developments",
+      "body": "Selva, Ainara, Fincas, and Real — all delivered and 100% sold. Our track record speaks for itself.",
+      "cta": "I want to be next"
+    }
+  },
+  "about": {
+    "sectionLabel": "Who we are",
+    "heading": "We build communities, not just properties",
+    "lead": "We are Grupo RH — a team committed to making every investment a reliable, transparent experience with real returns. R+H = Win-Win.",
+    "gpwCertifiedAs": "Certified as",
+    "gpwTitle": "Great Place to Work®",
+    "gpwAlt": "Great Place to Work certification",
+    "value1Strong": "Commitment",
+    "value1Rest": "— we deliver on every promise at every stage of your project.",
+    "value2Strong": "Excellence",
+    "value2Rest": "— quality standards that exceed market expectations.",
+    "value3Strong": "Community",
+    "value3Rest": "— we build communities where families thrive together.",
+    "value4Strong": "Success",
+    "value4Rest": "— every development is designed to generate real, lasting returns."
+  },
+  "blogPreview": {
+    "sectionLabel": "News & insights",
+    "heading": "Recent articles",
+    "viewAll": "View all articles",
+    "readMore": "Read more →"
+  },
+  "contact": {
+    "sectionLabel": "Let's talk",
+    "heading": "Ready to invest?",
+    "addressLabel": "Address",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email",
+    "hoursLabel": "Hours",
+    "hoursValue": "Always available — the agent replies 24/7",
+    "followUs": "Follow us",
+    "slotHeading": "Shall we talk?",
+    "slotSub": "Our advisor is available to answer all your questions about real estate investment in Yucatán.",
+    "formName": "Your name",
+    "formPhone": "Phone",
+    "formEmail": "Email address",
+    "formProject": "Select a development",
+    "formSubmit": "Send request",
+    "formSending": "Sending...",
+    "formSuccess": "Message sent! We'll be in touch soon.",
+    "formError": "Something went wrong. Please try again.",
+    "orEmail": "Or email us at",
+    "whatsappCta": "Message on WhatsApp"
+  },
+  "footer": {
+    "about": "About",
+    "developments": "Developments",
+    "blog": "Blog",
+    "contact": "Contact",
+    "privacy": "Privacy policy",
+    "copyright": "All rights reserved."
+  },
+  "blog": {
+    "heroLabel": "Articles",
+    "heroHeading": "Grupo RH Blog",
+    "backToBlog": "← Back to Blog",
+    "readMore": "Read more →",
+    "by": "By",
+    "publishedOn": "Published on"
+  },
+  "desarrollos": {
+    "heroLabel": "Development",
+    "requestInfo": "Request information",
+    "whatsapp": "Ask via WhatsApp",
+    "back": "← View all developments",
+    "conceptImages": "Project images",
+    "formHeading": "Interested in this development?",
+    "formSub": "Leave your details and an advisor will contact you shortly."
+  },
+  "seo": {
+    "homeTitle": "Joel Pacheco | Grupo RH — Real Estate Developments in Mérida, Yucatán",
+    "homeDesc": "Real estate investment with solid foundations in Yucatán. Discover Gran Verona, Playa Clara, Playar, Cal & Canto and RHEVO — residential and coastal developments with guaranteed appreciation.",
+    "blogListTitle": "Blog | Grupo RH — Real Estate Investment in Yucatán",
+    "blogListDesc": "Articles on real estate investment in Yucatán: appreciation, developments, advice and market trends.",
+    "notFoundTitle": "404 — Page Not Found | Grupo RH",
+    "granVeronaTitle": "Gran Verona | Grupo RH — Residential Lots in North Mérida, Yucatán",
+    "granVeronaDesc": "Residential lots in northern Mérida. First-class urbanization, planned community, and proven appreciation.",
+    "playaClaraTitle": "Playa Clara | Grupo RH — Coastal Lots on the Emerald Coast, Yucatán",
+    "playaClaraDesc": "Semi-urbanized lots 9.5 km from the sea on the Emerald Coast. Your coastal paradise with full services.",
+    "playarTitle": "Playar | Grupo RH — Coastal Vacation Community, Dzidzantún",
+    "playarDesc": "Coastal vacation community with the spirit of 'An eternal summer.' The perfect escape, never far from Mérida.",
+    "calCantoTitle": "Cal & Canto | Grupo RH — Exclusive Development in Conkal, Yucatán",
+    "calCantoDesc": "A place to make history. Exclusive development with 50–100% appreciation projected in a high-growth area.",
+    "rhevoTitle": "RHEVO | Grupo RH — Premium Fractional Investment on the Emerald Coast",
+    "rhevoDesc": "Premium fractional investment model on the Emerald Coast. Access luxury with an accessible entry point and guaranteed returns."
+  },
+  "notFound": {
+    "heading": "Page not found",
+    "body": "Sorry, the page you're looking for doesn't exist.",
+    "cta": "Back to home"
+  },
+  "mobile": {
+    "phone": "+52 999 370 8117",
+    "switchToEnglish": "Switch to English",
+    "switchToSpanish": "Cambiar a Español"
+  }
+}

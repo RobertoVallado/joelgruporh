@@ -1,0 +1,237 @@
+/* ============================================================
+   ADDITIONS — new component styles not in global.css
+   ============================================================ */
+
+/* ── Page loading fallback ───────────────────────────────── */
+.page-loading {
+  min-height: 60vh;
+}
+
+/* ── Contact form inputs ─────────────────────────────────── */
+.contact-form input,
+.contact-form select,
+.contact-agent-slot input,
+.contact-agent-slot select {
+  display: block;
+  width: 100%;
+  padding: .75rem 1rem;
+  margin-bottom: .75rem;
+  border: 1.5px solid var(--border);
+  border-radius: var(--r-md);
+  font-family: var(--font-body);
+  font-size: .95rem;
+  color: var(--ink);
+  background: var(--white);
+  transition: border-color var(--dur) var(--ease);
+  -webkit-appearance: none;
+}
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-agent-slot input:focus,
+.contact-agent-slot select:focus {
+  outline: none;
+  border-color: var(--green);
+}
+.contact-form .btn,
+.contact-agent-slot .btn {
+  width: 100%;
+  margin-top: .25rem;
+  display: block;
+  text-align: center;
+}
+.contact-email-alt {
+  margin-top: 1rem;
+  font-size: .8rem;
+  color: var(--muted);
+  text-align: center;
+}
+.contact-email-alt a {
+  color: var(--green);
+}
+
+/* ── btn-full util ───────────────────────────────────────── */
+.btn-full { width: 100%; display: block; text-align: center; }
+
+/* ── WhatsApp floating button ────────────────────────────── */
+.whatsapp-float {
+  position: fixed;
+  bottom: 1.75rem;
+  right: 1.75rem;
+  z-index: 9000;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37,211,102,.4);
+  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+}
+.whatsapp-float:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 28px rgba(37,211,102,.55);
+}
+
+/* ── Image gallery ───────────────────────────────────────── */
+.image-gallery {
+  position: relative;
+  border-radius: var(--r-md);
+  overflow: hidden;
+}
+.gallery-track {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  background: var(--surface);
+  border-radius: var(--r-md);
+}
+.gallery-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.gallery-slide img,
+.gallery-slide .lazy-load-image-background {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+}
+.gallery-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.gallery-arrow {
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  width: 36px;
+  height: 36px;
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--dur) var(--ease);
+}
+.gallery-arrow:hover {
+  background: var(--green);
+  border-color: var(--green);
+  color: var(--white);
+}
+.gallery-dots { display: flex; gap: .5rem; }
+.gallery-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--border);
+  border: none;
+  cursor: pointer;
+  transition: background var(--dur) var(--ease), transform var(--dur) var(--ease);
+  padding: 0;
+}
+.gallery-dot.active {
+  background: var(--green);
+  transform: scale(1.3);
+}
+
+/* ── Desarrollo detail page ──────────────────────────────── */
+.dev-detail-hero {
+  padding: calc(var(--nav-h) + 4rem) 0 4rem;
+  color: var(--white);
+  position: relative;
+}
+.dev-detail-back {
+  display: inline-block;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.55);
+  margin-bottom: 2rem;
+  transition: color var(--dur) var(--ease);
+}
+.dev-detail-back:hover { color: var(--white); }
+.dev-detail-logo {
+  height: 52px;
+  width: auto;
+  display: block;
+  margin-bottom: 1.5rem;
+  filter: brightness(0) invert(1);
+}
+.dev-detail-label {
+  color: rgba(255,255,255,.6) !important;
+}
+.dev-detail-tagline {
+  font-size: clamp(2rem, 5vw, 4rem);
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--white);
+  margin: .5rem 0;
+}
+.dev-detail-name {
+  font-size: 1rem;
+  color: rgba(255,255,255,.5);
+  font-weight: 600;
+  letter-spacing: .05em;
+}
+.dev-detail-section {
+  padding: clamp(4rem, 8vw, 7rem) 0;
+}
+.dev-detail-section--alt {
+  background: var(--off-white);
+}
+.dev-detail-section-title {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  margin-bottom: 2rem;
+}
+.dev-detail-body {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--ink-mid);
+  max-width: 56ch;
+}
+.dev-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: start;
+}
+@media (max-width: 768px) {
+  .dev-detail-grid { grid-template-columns: 1fr; }
+  .dev-detail-logo { height: 40px; }
+}
+
+/* ── Radix Dialog animation for mobile drawer ────────────── */
+.mobile-overlay {
+  animation: overlayShow 0.25s ease forwards;
+}
+.mobile-drawer {
+  animation: drawerSlide 0.3s cubic-bezier(.4,0,.2,1) forwards;
+}
+@keyframes overlayShow {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes drawerSlide {
+  from { transform: translateX(100%); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+
+/* Radix Dialog close animation */
+.mobile-drawer[data-state='closed'] {
+  animation: drawerClose 0.25s cubic-bezier(.4,0,.2,1) forwards;
+}
+@keyframes drawerClose {
+  from { transform: translateX(0); opacity: 1; }
+  to   { transform: translateX(100%); opacity: 0; }
+}
