@@ -7,25 +7,23 @@ This document is the single source of truth for publishing blog posts on **joelg
 ## How the system works
 
 ```
-content/posts/<slug>.json   ← you write this
-        ↓  node build.js
-blog/<slug>/index.html      ← generated automatically
-blog/index.html             ← regenerated (listing page)
-index.html                  ← regenerated (home preview)
-sitemap.xml                 ← regenerated
+src/data/posts/<slug>.json   ← you write this
+        ↓  npm run build
+dist/                        ← Vite picks it up automatically
+sitemap.xml                  ← regenerated (all blog URLs included)
 ```
 
 **Workflow:**
-1. Create `content/posts/<slug>.json` following the rules below
-2. Run `node build.js` from the project root (`joelgruporh/`)
-3. Verify output — build should report `✓ blog/<slug>/index.html`
-4. Commit `content/posts/<slug>.json` + the entire `blog/` directory + `sitemap.xml` + `index.html`
+1. Create `src/data/posts/<slug>.json` following the rules below
+2. Run `npm run build` from the project root — Vite picks up the new file automatically via `import.meta.glob`
+3. Run `npm run deploy` to publish to GitHub Pages
+4. Only commit `src/data/posts/<slug>.json` — nothing else needs manual updating
 
 ---
 
 ## Slug rules (URL naming)
 
-The slug becomes the public URL: `joelgruporh.mx/blog/<slug>/`
+The slug becomes the public URL: `joelpacheco-gruporh.robertovallado.dev/es/blog/<slug>/`
 
 | Rule | ✓ Correct | ✗ Wrong |
 |---|---|---|
@@ -45,7 +43,7 @@ The slug becomes the public URL: `joelgruporh.mx/blog/<slug>/`
 
 ## Image rules
 
-Images are referenced relative to the **site root** (`joelgruporh/`).
+Images are referenced relative to the **public root** (served at `/`).
 
 **Available images you can use today:**
 ```
@@ -65,6 +63,8 @@ assets/images/concept-images/rhevo.webp
 assets/images/concept-images/rhevo-02.webp
 assets/images/concept-images/rhevo-03.webp
 ```
+
+Images live in `public/assets/images/` in the repo and are served at the paths shown above.
 
 **Match image to topic:**
 | Post topic | Use image |
