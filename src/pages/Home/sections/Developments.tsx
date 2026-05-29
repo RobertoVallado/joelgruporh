@@ -50,6 +50,7 @@ export default function Developments() {
               <div className="dev-body">
                 <img
                   className="dev-logo"
+                  data-logo={dev.slug}
                   src={dev.logo}
                   alt={dev.logoAlt}
                   loading="lazy"
