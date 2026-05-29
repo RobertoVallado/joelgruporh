@@ -1,4 +1,6 @@
+import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useReveal } from '../../../hooks/useReveal'
 import MotionSection from '../../../components/ui/MotionSection'
 import LazyImage from '../../../components/ui/LazyImage'
 
@@ -9,6 +11,7 @@ const CARDS = [
     titleKey: 'guarantees.card1Title',
     bodyKey: 'guarantees.card1Body',
     altKey: 'guarantees.card1Alt',
+    delayClass: 'reveal',        // no stagger — matches original
   },
   {
     num: '02',
@@ -16,6 +19,7 @@ const CARDS = [
     titleKey: 'guarantees.card2Title',
     bodyKey: 'guarantees.card2Body',
     altKey: 'guarantees.card2Alt',
+    delayClass: 'reveal reveal-d2',
   },
   {
     num: '03',
@@ -23,14 +27,17 @@ const CARDS = [
     titleKey: 'guarantees.card3Title',
     bodyKey: 'guarantees.card3Body',
     altKey: 'guarantees.card3Alt',
+    delayClass: 'reveal reveal-d3',
   },
 ]
 
 export default function Guarantees() {
   const { t } = useTranslation()
+  const sectionRef = useRef<HTMLElement>(null)
+  useReveal(sectionRef)
 
   return (
-    <section id="garantias" aria-labelledby="garantias-title">
+    <section id="garantias" aria-labelledby="garantias-title" ref={sectionRef}>
       <div className="container">
         <MotionSection className="section-hdr">
           <span className="label">{t('guarantees.sectionLabel')}</span>
@@ -38,8 +45,8 @@ export default function Guarantees() {
         </MotionSection>
 
         <div className="guarantees-grid">
-          {CARDS.map(({ num, img, titleKey, bodyKey, altKey }, i) => (
-            <MotionSection key={num} className="g-card" delay={i * 0.1}>
+          {CARDS.map(({ num, img, titleKey, bodyKey, altKey, delayClass }) => (
+            <article key={num} className={`g-card ${delayClass}`}>
               <div className="g-card-img">
                 <LazyImage src={img} alt={t(altKey)} />
               </div>
@@ -50,7 +57,7 @@ export default function Guarantees() {
                 <h3>{t(titleKey)}</h3>
                 <p>{t(bodyKey)}</p>
               </div>
-            </MotionSection>
+            </article>
           ))}
         </div>
       </div>

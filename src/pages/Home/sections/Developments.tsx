@@ -1,6 +1,8 @@
+import { useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { useLang } from '../../../hooks/useLang'
+import { useReveal } from '../../../hooks/useReveal'
 import MotionSection from '../../../components/ui/MotionSection'
 import LazyImage from '../../../components/ui/LazyImage'
 import { DESARROLLOS } from '../../../data/desarrollos'
@@ -10,9 +12,11 @@ const SOLD_OUT_GRADIENT = 'linear-gradient(135deg,#0D1F18,#1B3A2D)'
 export default function Developments() {
   const { t } = useTranslation()
   const { lang } = useLang()
+  const sectionRef = useRef<HTMLElement>(null)
+  useReveal(sectionRef)
 
   return (
-    <section id="desarrollos" aria-labelledby="desarrollos-title">
+    <section id="desarrollos" aria-labelledby="desarrollos-title" ref={sectionRef}>
       <div className="container">
         <div className="dev-header-row">
           <MotionSection>
@@ -26,7 +30,10 @@ export default function Developments() {
 
         <div className="developments-grid">
           {DESARROLLOS.map((dev, i) => (
-            <MotionSection key={dev.slug} className="dev-card" delay={(i % 3) * 0.1}>
+            <article
+              key={dev.slug}
+              className={`dev-card reveal reveal-d${(i % 3) + 1}`}
+            >
               <div className="dev-thumb" style={{ background: dev.gradient }}>
                 {dev.conceptImages[0] && (
                   <LazyImage src={dev.conceptImages[0]} alt={t(dev.altKey)} />
@@ -50,11 +57,11 @@ export default function Developments() {
                   {t(dev.ctaKey)}
                 </Link>
               </div>
-            </MotionSection>
+            </article>
           ))}
 
-          {/* Sold-out callout */}
-          <MotionSection className="dev-card sold-out" delay={0.2}>
+          {/* Sold-out callout — matches original: reveal-d3 */}
+          <article className="dev-card sold-out reveal reveal-d3">
             <div className="dev-thumb" style={{ background: SOLD_OUT_GRADIENT }}>
               <div className="dev-color-block" aria-hidden="true">
                 <span className="dev-color-initial">100%</span>
@@ -69,7 +76,7 @@ export default function Developments() {
                 {t('developments.soldOut.cta')}
               </a>
             </div>
-          </MotionSection>
+          </article>
         </div>
       </div>
     </section>
