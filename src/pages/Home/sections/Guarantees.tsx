@@ -2,7 +2,6 @@ import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useReveal } from '../../../hooks/useReveal'
 import MotionSection from '../../../components/ui/MotionSection'
-import LazyImage from '../../../components/ui/LazyImage'
 
 const CARDS = [
   {
@@ -48,7 +47,7 @@ export default function Guarantees() {
           {CARDS.map(({ num, img, titleKey, bodyKey, altKey, delayClass }) => (
             <article key={num} className={`g-card ${delayClass}`}>
               <div className="g-card-img">
-                <LazyImage src={img} alt={t(altKey)} />
+                <img src={img} alt={t(altKey)} loading="lazy" />
               </div>
               <div className="g-card-body">
                 <div className="g-card-num" aria-hidden="true">

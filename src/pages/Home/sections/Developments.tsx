@@ -4,7 +4,6 @@ import { useTranslation } from 'react-i18next'
 import { useLang } from '../../../hooks/useLang'
 import { useReveal } from '../../../hooks/useReveal'
 import MotionSection from '../../../components/ui/MotionSection'
-import LazyImage from '../../../components/ui/LazyImage'
 import { DESARROLLOS } from '../../../data/desarrollos'
 
 const SOLD_OUT_GRADIENT = 'linear-gradient(135deg,#0D1F18,#1B3A2D)'
@@ -36,7 +35,12 @@ export default function Developments() {
             >
               <div className="dev-thumb" style={{ background: dev.gradient }}>
                 {dev.conceptImages[0] && (
-                  <LazyImage src={dev.conceptImages[0]} alt={t(dev.altKey)} />
+                  <img
+                    src={dev.conceptImages[0]}
+                    alt={t(dev.altKey)}
+                    loading="lazy"
+                    onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none' }}
+                  />
                 )}
                 <div className="dev-color-block" aria-hidden="true">
                   <span className="dev-color-initial">{dev.initials}</span>
