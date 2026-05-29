@@ -1,4 +1,5 @@
 export const SITE_URL = 'https://joelpacheco-gruporh.robertovallado.dev'
+export const FORMSPREE_ID: string = import.meta.env.VITE_FORMSPREE_ID ?? 'mlgvvbnr'
 export const PHONE = '+529993708117'
 export const PHONE_DISPLAY = '+52 999 370 8117'
 export const EMAIL = 'joel.pacheco@gruporh.mx'

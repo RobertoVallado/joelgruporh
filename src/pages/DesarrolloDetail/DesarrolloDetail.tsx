@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom'
-import { useForm } from '@formspree/react'
+import { useForm, ValidationError } from '@formspree/react'
 import { useTranslation } from 'react-i18next'
 import { useLang } from '../../hooks/useLang'
 import PageSeo from '../../components/seo/PageSeo'
@@ -7,28 +7,39 @@ import JsonLd from '../../components/seo/JsonLd'
 import ImageGallery from '../../components/ui/ImageGallery'
 import MotionSection from '../../components/ui/MotionSection'
 import { DESARROLLOS } from '../../data/desarrollos'
-import { SITE_URL, WHATSAPP_BASE, EMAIL } from '../../config/site'
+import { SITE_URL, WHATSAPP_BASE, EMAIL, FORMSPREE_ID } from '../../config/site'
 import NotFound from '../NotFound/NotFound'
-
-const FORMSPREE_ID = import.meta.env.VITE_FORMSPREE_ID
 
 function DesarrolloForm({ devName }: { devName: string }) {
   const { t } = useTranslation()
-  const [state, handleSubmit] = useForm(FORMSPREE_ID ?? 'placeholder')
+  const [state, handleSubmit] = useForm(FORMSPREE_ID)
 
   if (state.succeeded) {
-    return <p style={{ color: 'var(--green)', fontWeight: 600 }}>{t('contact.formSuccess')}</p>
+    return (
+      <p style={{ color: 'var(--green)', fontWeight: 600, padding: '1rem 0' }}>
+        {t('contact.formSuccess')}
+      </p>
+    )
   }
 
   return (
     <form onSubmit={handleSubmit} className="contact-form">
       <input name="nombre" type="text" placeholder={t('contact.formName')} required />
-      <input name="telefono" type="tel" placeholder={t('contact.formPhone')} />
+      <ValidationError field="nombre" prefix={t('contact.formName')} errors={state.errors} className="form-error" />
+
       <input name="email" type="email" placeholder={t('contact.formEmail')} required />
+      <ValidationError field="email" prefix={t('contact.formEmail')} errors={state.errors} className="form-error" />
+
+      <input name="telefono" type="tel" placeholder={t('contact.formPhone')} />
+
       <input type="hidden" name="proyecto" value={devName} />
+
+      <ValidationError errors={state.errors} className="form-error" />
+
       <button type="submit" className="btn btn-primary btn-full" disabled={state.submitting}>
         {state.submitting ? t('contact.formSending') : t('contact.formSubmit')}
       </button>
+
       <p className="contact-email-alt">
         {t('contact.orEmail')} <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
       </p>
@@ -120,18 +131,7 @@ export default function DesarrolloDetail() {
               <div className="contact-agent-slot">
                 <h3>{t('desarrollos.formHeading')}</h3>
                 <p className="slot-sub">{t('desarrollos.formSub')}</p>
-                {FORMSPREE_ID ? (
-                  <DesarrolloForm devName={dev.name} />
-                ) : (
-                  <a
-                    href={`${WHATSAPP_BASE}?text=${dev.whatsappMsg}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-primary btn-full"
-                  >
-                    {t('desarrollos.requestInfo')}
-                  </a>
-                )}
+                <DesarrolloForm devName={dev.name} />
               </div>
             </MotionSection>
           </div>

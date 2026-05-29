@@ -1,44 +1,31 @@
-import { useForm } from '@formspree/react'
+import { useForm, ValidationError } from '@formspree/react'
 import { useTranslation } from 'react-i18next'
 import MotionSection from '../../../components/ui/MotionSection'
-import { EMAIL, PHONE_DISPLAY, WHATSAPP_BASE, SOCIALS } from '../../../config/site'
+import { EMAIL, PHONE_DISPLAY, WHATSAPP_BASE, SOCIALS, FORMSPREE_ID } from '../../../config/site'
 import { DESARROLLOS } from '../../../data/desarrollos'
-
-const FORMSPREE_ID = import.meta.env.VITE_FORMSPREE_ID
 
 function ContactForm() {
   const { t } = useTranslation()
-  const [state, handleSubmit] = useForm(FORMSPREE_ID ?? 'placeholder')
-
-  if (!FORMSPREE_ID) {
-    return (
-      <div>
-        <a
-          href={`${WHATSAPP_BASE}?text=Hola%20Joel%2C%20me%20interesa%20conocer%20sus%20desarrollos%20inmobiliarios`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn btn-primary btn-full"
-          style={{ marginBottom: '1rem', display: 'block', textAlign: 'center' }}
-        >
-          {t('contact.whatsappCta')}
-        </a>
-        <p className="contact-email-alt">
-          {t('contact.orEmail')}{' '}
-          <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
-        </p>
-      </div>
-    )
-  }
+  const [state, handleSubmit] = useForm(FORMSPREE_ID)
 
   if (state.succeeded) {
-    return <p style={{ color: 'var(--green)', fontWeight: 600 }}>{t('contact.formSuccess')}</p>
+    return (
+      <p style={{ color: 'var(--green)', fontWeight: 600, padding: '1rem 0' }}>
+        {t('contact.formSuccess')}
+      </p>
+    )
   }
 
   return (
     <form onSubmit={handleSubmit} className="contact-form">
       <input name="nombre" type="text" placeholder={t('contact.formName')} required />
-      <input name="telefono" type="tel" placeholder={t('contact.formPhone')} />
+      <ValidationError field="nombre" prefix={t('contact.formName')} errors={state.errors} className="form-error" />
+
       <input name="email" type="email" placeholder={t('contact.formEmail')} required />
+      <ValidationError field="email" prefix={t('contact.formEmail')} errors={state.errors} className="form-error" />
+
+      <input name="telefono" type="tel" placeholder={t('contact.formPhone')} />
+
       <select name="proyecto">
         <option value="">{t('contact.formProject')}</option>
         {DESARROLLOS.map((dev) => (
@@ -47,9 +34,13 @@ function ContactForm() {
           </option>
         ))}
       </select>
+
+      <ValidationError errors={state.errors} className="form-error" />
+
       <button type="submit" className="btn btn-primary btn-full" disabled={state.submitting}>
         {state.submitting ? t('contact.formSending') : t('contact.formSubmit')}
       </button>
+
       <p className="contact-email-alt">
         {t('contact.orEmail')}{' '}
         <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
