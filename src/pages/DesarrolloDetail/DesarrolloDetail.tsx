@@ -110,6 +110,26 @@ export default function DesarrolloDetail() {
         </div>
       </section>
 
+      {/* Virtual tour */}
+      {dev.virtualTourUrl && (
+        <section className="dev-detail-section">
+          <div className="container">
+            <MotionSection>
+              <h2 className="dev-detail-section-title">{t('desarrollos.virtualTour')}</h2>
+              <div className="dev-detail-tour-frame">
+                <iframe
+                  src={dev.virtualTourUrl}
+                  title={`${t('desarrollos.virtualTour')} — ${dev.name}`}
+                  loading="lazy"
+                  allow="accelerometer; gyroscope; fullscreen"
+                  allowFullScreen
+                />
+              </div>
+            </MotionSection>
+          </div>
+        </section>
+      )}
+
       {/* Body + Form */}
       <section className="dev-detail-section dev-detail-section--alt">
         <div className="container">

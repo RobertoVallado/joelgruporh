@@ -220,6 +220,21 @@
   .dev-detail-grid { grid-template-columns: 1fr; }
   .dev-detail-logo { height: 40px; }
 }
+.dev-detail-tour-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--off-white);
+}
+.dev-detail-tour-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
 
 /* ── Radix Dialog animation for mobile drawer ────────────── */
 .mobile-overlay {

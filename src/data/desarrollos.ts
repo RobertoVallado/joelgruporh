@@ -6,6 +6,7 @@ export interface Desarrollo {
   logo: string
   logoAlt: string
   conceptImages: string[]
+  virtualTourUrl?: string
   whatsappMsg: string
   badgeKey: string
   taglineKey: string
@@ -71,6 +72,7 @@ export const DESARROLLOS: Desarrollo[] = [
       '/assets/images/concept-images/playar-02.webp',
       '/assets/images/concept-images/playar-03.webp',
     ],
+    virtualTourUrl: 'https://eva3d.com/recorridos-virtuales-360/rh-desarrollos/playar/index.htm',
     whatsappMsg: 'Hola%2C%20me%20interesa%20cotizar%20Playar',
     badgeKey: 'developments.playar.badge',
     taglineKey: 'developments.playar.tagline',
@@ -113,6 +115,7 @@ export const DESARROLLOS: Desarrollo[] = [
       '/assets/images/concept-images/rhevo-02.webp',
       '/assets/images/concept-images/rhevo-03.webp',
     ],
+    virtualTourUrl: 'https://eva3d.com/recorridos-virtuales-360/rh-desarrollos/rhevo/',
     whatsappMsg: 'Hola%2C%20me%20interesa%20invertir%20en%20RHEVO',
     badgeKey: 'developments.rhevo.badge',
     taglineKey: 'developments.rhevo.tagline',
