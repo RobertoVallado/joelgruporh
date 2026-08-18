@@ -5,6 +5,7 @@
     "guarantees": "Garantías",
     "developments": "Desarrollos",
     "blog": "Blog",
+    "ecoTurismo": "Eco Turismo",
     "contact": "Contacto",
     "langLabel": "EN",
     "openMenu": "Abrir menú",
@@ -128,6 +129,7 @@
     "about": "Nosotros",
     "developments": "Desarrollos",
     "blog": "Blog",
+    "ecoTurismo": "Eco Turismo",
     "contact": "Contacto",
     "privacy": "Aviso de privacidad",
     "copyright": "Todos los derechos reservados."
@@ -139,6 +141,13 @@
     "readMore": "Leer más →",
     "by": "Por",
     "publishedOn": "Publicado el"
+  },
+  "ecoTurismo": {
+    "heroLabel": "Guías de viaje",
+    "heroHeading": "Eco Turismo en Yucatán",
+    "backToGuides": "← Volver a Eco Turismo",
+    "emptyTitle": "Muy pronto",
+    "emptyBody": "Estamos preparando guías turísticas de los mejores destinos cerca de nuestros desarrollos en Yucatán. Vuelve pronto."
   },
   "desarrollos": {
     "heroLabel": "Desarrollo",
@@ -154,6 +163,8 @@
     "homeDesc": "Inversión inmobiliaria con bases sólidas en Yucatán. Descubre Gran Verona, Playa Clara, Playar, Cal & Canto y RHEVO — desarrollos residenciales y costeros con plusvalía garantizada.",
     "blogListTitle": "Blog | Grupo RH — Inversión Inmobiliaria en Yucatán",
     "blogListDesc": "Artículos sobre inversión inmobiliaria en Yucatán: plusvalía, desarrollos, consejos y tendencias del mercado.",
+    "ecoTurismoListTitle": "Eco Turismo | Grupo RH — Guías de Viaje por Yucatán",
+    "ecoTurismoListDesc": "Guías turísticas de playas, cenotes y pueblos cerca de nuestros desarrollos en Yucatán. Descubre lo mejor de la región.",
     "notFoundTitle": "404 — Página no encontrada | Grupo RH",
     "granVeronaTitle": "Gran Verona | Grupo RH — Lotes Residenciales Mérida Norte, Yucatán",
     "granVeronaDesc": "Lotes residenciales en el nuevo norte de Mérida. Urbanización de primer nivel, comunidad planeada y plusvalía comprobada.",

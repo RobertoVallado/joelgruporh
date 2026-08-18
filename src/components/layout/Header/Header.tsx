@@ -57,6 +57,13 @@ export default function Header() {
           >
             {t('nav.blog')}
           </Link>
+          <Link
+            to={`/${lang}/eco-turismo/`}
+            role="listitem"
+            className={location.pathname.includes('/eco-turismo') ? 'active' : ''}
+          >
+            {t('nav.ecoTurismo')}
+          </Link>
           {navLink('contacto', t('nav.contact'))}
         </div>
 

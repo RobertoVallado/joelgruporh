@@ -47,6 +47,7 @@ export default function MobileDrawer({ open, onClose }: MobileDrawerProps) {
             <Link to={`/${lang}/garantias`}   onClick={close}>{t('nav.guarantees')}</Link>
             <Link to={`/${lang}/desarrollos`} onClick={close}>{t('nav.developments')}</Link>
             <Link to={`/${lang}/blog/`}       onClick={close}>{t('nav.blog')}</Link>
+            <Link to={`/${lang}/eco-turismo/`} onClick={close}>{t('nav.ecoTurismo')}</Link>
             <Link to={`/${lang}/contacto`}    onClick={close}>{t('nav.contact')}</Link>
           </div>
           <div className="drawer-foot">

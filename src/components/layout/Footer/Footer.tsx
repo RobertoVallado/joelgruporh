@@ -16,6 +16,7 @@ export default function Footer() {
             <Link to={`/${lang}/nosotros`}>{t('footer.about')}</Link>
             <Link to={`/${lang}/desarrollos`}>{t('footer.developments')}</Link>
             <Link to={`/${lang}/blog/`}>{t('footer.blog')}</Link>
+            <Link to={`/${lang}/eco-turismo/`}>{t('footer.ecoTurismo')}</Link>
             <Link to={`/${lang}/contacto`}>{t('footer.contact')}</Link>
             <a href="#">{t('footer.privacy')}</a>
           </nav>

@@ -9,9 +9,9 @@ const LANGS = ['es', 'en']
 const SECTION_SLUGS = ['nosotros', 'garantias', 'desarrollos', 'contacto']
 const DESARROLLO_SLUGS = ['gran-verona', 'playa-clara', 'playar', 'cal-canto', 'rhevo']
 
-function getPostSlugs(): string[] {
+function getJsonSlugs(dir: string): string[] {
   try {
-    return readdirSync(join(process.cwd(), 'src/data/posts'))
+    return readdirSync(join(process.cwd(), dir))
       .filter((f) => f.endsWith('.json'))
       .map((f) => f.replace('.json', ''))
   } catch {
@@ -20,13 +20,16 @@ function getPostSlugs(): string[] {
 }
 
 export default defineConfig(() => {
-  const postSlugs = getPostSlugs()
+  const postSlugs = getJsonSlugs('src/data/posts')
+  const guideSlugs = getJsonSlugs('src/data/guides')
 
   const dynamicRoutes = LANGS.flatMap((lang) => [
     `/${lang}/`,
     ...SECTION_SLUGS.map((s) => `/${lang}/${s}`),
     `/${lang}/blog/`,
     ...postSlugs.map((slug) => `/${lang}/blog/${slug}/`),
+    `/${lang}/eco-turismo/`,
+    ...guideSlugs.map((slug) => `/${lang}/eco-turismo/${slug}/`),
     ...DESARROLLO_SLUGS.map((slug) => `/${lang}/desarrollos/${slug}/`),
   ])
 

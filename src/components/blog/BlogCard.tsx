@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import type { BlogPost } from '../../types/blog'
 import type { Lang } from '../../hooks/useLang'
 import LazyImage from '../ui/LazyImage'
+import ThumbPlaceholder from '../ui/ThumbPlaceholder'
 
 interface BlogCardProps {
   post: BlogPost
@@ -25,11 +26,13 @@ export default function BlogCard({ post, lang }: BlogCardProps) {
 
   return (
     <article className="blog-card">
-      {post.image && (
-        <div className="blog-thumb">
+      <div className="blog-thumb">
+        {post.image ? (
           <LazyImage src={`/${post.image}`} alt={imageAlt} />
-        </div>
-      )}
+        ) : (
+          <ThumbPlaceholder label={category} />
+        )}
+      </div>
       <div className="blog-body">
         <div className="blog-meta">
           <span className="blog-cat">{category}</span>

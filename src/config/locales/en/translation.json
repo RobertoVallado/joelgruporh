@@ -5,6 +5,7 @@
     "guarantees": "Our Pledge",
     "developments": "Developments",
     "blog": "Blog",
+    "ecoTurismo": "Eco-Tourism",
     "contact": "Contact",
     "langLabel": "ES",
     "openMenu": "Open menu",
@@ -128,6 +129,7 @@
     "about": "About",
     "developments": "Developments",
     "blog": "Blog",
+    "ecoTurismo": "Eco-Tourism",
     "contact": "Contact",
     "privacy": "Privacy policy",
     "copyright": "All rights reserved."
@@ -139,6 +141,13 @@
     "readMore": "Read more →",
     "by": "By",
     "publishedOn": "Published on"
+  },
+  "ecoTurismo": {
+    "heroLabel": "Travel guides",
+    "heroHeading": "Eco-Tourism in Yucatán",
+    "backToGuides": "← Back to Eco-Tourism",
+    "emptyTitle": "Coming soon",
+    "emptyBody": "We're preparing travel guides to the best destinations near our developments in Yucatán. Check back soon."
   },
   "desarrollos": {
     "heroLabel": "Development",
@@ -154,6 +163,8 @@
     "homeDesc": "Real estate investment with solid foundations in Yucatán. Discover Gran Verona, Playa Clara, Playar, Cal & Canto and RHEVO — residential and coastal developments with guaranteed appreciation.",
     "blogListTitle": "Blog | Grupo RH — Real Estate Investment in Yucatán",
     "blogListDesc": "Articles on real estate investment in Yucatán: appreciation, developments, advice and market trends.",
+    "ecoTurismoListTitle": "Eco-Tourism | Grupo RH — Travel Guides to Yucatán",
+    "ecoTurismoListDesc": "Travel guides to beaches, cenotes and towns near our developments in Yucatán. Discover the best of the region.",
     "notFoundTitle": "404 — Page Not Found | Grupo RH",
     "granVeronaTitle": "Gran Verona | Grupo RH — Residential Lots in North Mérida, Yucatán",
     "granVeronaDesc": "Residential lots in northern Mérida. First-class urbanization, planned community, and proven appreciation.",

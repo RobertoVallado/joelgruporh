@@ -8,6 +8,8 @@ import WhatsAppFloat from './components/ui/WhatsAppFloat'
 const Home = lazy(() => import('./pages/Home/Home'))
 const BlogList = lazy(() => import('./pages/BlogList/BlogList'))
 const BlogPost = lazy(() => import('./pages/BlogPost/BlogPost'))
+const EcoTurismoList = lazy(() => import('./pages/EcoTurismoList/EcoTurismoList'))
+const EcoTurismoPost = lazy(() => import('./pages/EcoTurismoPost/EcoTurismoPost'))
 const DesarrolloDetail = lazy(() => import('./pages/DesarrolloDetail/DesarrolloDetail'))
 const NotFound = lazy(() => import('./pages/NotFound/NotFound'))
 
@@ -51,6 +53,8 @@ export default function App() {
         {/* Content routes */}
         <Route path="blog" element={<BlogList />} />
         <Route path="blog/:slug" element={<BlogPost />} />
+        <Route path="eco-turismo" element={<EcoTurismoList />} />
+        <Route path="eco-turismo/:slug" element={<EcoTurismoPost />} />
         <Route path="desarrollos/:slug" element={<DesarrolloDetail />} />
       </Route>
       <Route
